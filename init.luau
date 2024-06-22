@@ -17,11 +17,46 @@ local marketPlaceService = game:GetService('MarketplaceService');
 
 -- global variables
 
-local root = script
 local placeId = game.PlaceId;
-local data = require(script.data.experiences)
-local dataDecode = httpService:JSONDecode(data)
 local localPlayer = game.Players.LocalPlayer;
+
+
+local data = {
+    HorrificHousing = {
+        placeId = {263761432},
+        keySystem = true,
+        loadString = "https://raw.githubusercontent.com/SiusGIF/Silox-Boost-Up-Hub/main/SourceCode",
+    },
+    Bedwars = {
+        placeId = {6872265039},
+        loadString = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua",
+    },
+    PrisonLife = {
+        placeId = {155615604},
+        loadString = "https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script",
+    },
+    NaturalDisasterSurvival = {
+        placeId = {189707},
+        loadString = "https://gist.githubusercontent.com/TurkOyuncu99/7c75386107937fa006304efd24543ad4/raw/8d759dfcd95d39949c692735cfdf62baec0bf835/cafwetweg",
+    },
+    JailBreak = {
+        placeId = {606849621},
+        KeySys = true,
+        loadString = "https://projectevo.xyz/v4/script.lua",
+    },
+    NinjaLegend = {
+        placeId = {3956818381},
+        loadString = "https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua",
+    },
+    MegaEasyObby = {
+        placeId = {3587619225},
+		loadString = "https://pastebin.com/raw/X361rzKq",
+	},
+    TowerOfHell = {
+        placeId = {1962086868},
+		loadString = "https://raw.githubusercontent.com/sl-ius/Ovis/main/Scripts/Tower%20Of%20Hell.lua",
+	},
+}
 
 -- interface 
 
@@ -105,7 +140,7 @@ function startUpAnimation()
     end
 end;
 
-for _, data in pairs(dataDecode) do
+for _, data in pairs(data) do
     for _, placeId in pairs(data.placeId) do
         if placeId == game.PlaceId then
             startUpAnimation();
