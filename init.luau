@@ -19,7 +19,7 @@ local marketPlaceService = game:GetService('MarketplaceService');
 
 local root = script
 local placeId = game.PlaceId;
-local data = require(script.data)
+local data = require(script.data.experiences)
 local dataDecode = httpService:JSONDecode(data)
 local localPlayer = game.Players.LocalPlayer;
 
